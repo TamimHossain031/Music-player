@@ -20,16 +20,16 @@
             </figure>
             <h1 class="title">TuneTank.com</h1>
             <p class="song-name">under_the_sun_by_Tamim</p>
-            <audio id="song">
+            <audio id="song" controls>
                 <source src="src/tunetank.com_1454_under-the-sun_by_rainbowmusic.mp3">
             </audio>
             <input type="range" value="0" id="progress">
             <div class="control">
                 <span><i class="fa-solid fa-backward"></i></span>
                 <span onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></span>
-                <span><i class="fa-solid fa-forward"></i></span>
-   
+                <span><i class="fa-solid fa-forward"></i></span>   
             </div>
+            <input type="range" id="valume">
         </div>
     </section>
     <script src="./script.js"></script>

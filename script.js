@@ -1,9 +1,11 @@
 let progress = document.querySelector('#progress');
 let song = document.querySelector('#song');
 let ctrlIcon = document.querySelector('#ctrlIcon');
+let volume = document.querySelector('#valume');
 
 song.onloadedmetadata = function(){
-    progress.max = song.duration;    
+    progress.max = song.duration;   
+    
 }
 function playPause(){
     if(ctrlIcon.classList.contains('fa-pause')){
@@ -26,4 +28,8 @@ progress.onchange = function(){
     song.currentTime = progress.value;
     ctrlIcon.classList.add('fa-pause');
     ctrlIcon.classList.remove('fa-play')
+}
+
+volume.onchange = function(){
+    song.volume = volume.value / 100
 }
