@@ -4,7 +4,8 @@ let ctrlIcon = document.querySelector('#ctrlIcon');
 let volume = document.querySelector('#valume');
 
 song.onloadedmetadata = function(){
-    progress.max = song.duration;   
+    progress.max = song.duration; 
+    volume.value = song.volume * 100;
     
 }
 function playPause(){
